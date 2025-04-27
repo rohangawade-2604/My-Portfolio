@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import Header from './HeaderPart/Header'
+import {Header} from './HeaderPart/Header'
 import { AllRouter } from './RouterCom/AllRouters'
+
 
 function App() {
 
