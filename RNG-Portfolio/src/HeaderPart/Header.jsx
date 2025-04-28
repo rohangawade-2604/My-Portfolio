@@ -22,7 +22,7 @@ export const Header = () => {
   return (
     <>
    <div className='bg-fixed'>
-   <div className='gap-20 pl-10 border-b-2 border-white flex justify-center items-center h-25 w-full bg-black font-bold bg-fixed'>
+   <div className='gap-20 pl-10 text-[18px] border-b-2 border-white flex justify-center items-center h-25 w-full bg-black font-bold bg-fixed'>
           {
             links.map((data) => (
               <NavLink style={({isActive}) => {

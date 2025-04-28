@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { About } from '../HeaderPart/About'
+import { About } from '../AboutComponent/About'
 import { Contact } from '../HeaderPart/Contact' 
 import {Home} from '../HomeComponent/Home'
 import { Projects } from '../HeaderPart/Projects'
