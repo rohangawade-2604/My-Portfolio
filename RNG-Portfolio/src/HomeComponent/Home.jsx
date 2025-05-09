@@ -16,11 +16,11 @@ export const Home = () => {
           <h2 className='text-[51px] font-bold'>Web Developer</h2>
           <p className='text-[17px] mt-8 font-semibold'>I'm a passionate Frontend Developer with a love for creating beautiful, responsive, and user-friendly websites. I specialize in HTML, CSS, JavaScript, and modern frameworks like React. I'm excited to bring ideas to life on the web and constantly learning new technologies to improve my craft. Let's build something amazing together!</p>
 
-          <button className="relative group border-2 border-amber-300 text-amber-300 rounded-3xl p-4 mt-5 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
+          <button className="relative group border-2 border-amber-300 text-white rounded-3xl p-4 mt-5 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
            before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-amber-300 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:scale-x-100">
           
-           <span className="relative z-10 group-hover:text-black transition-colors duration-300">
-           More About <i className="fa-solid fa-arrow-right-long ml-2"></i>
+           <span className="relative z-10 group-hover:text-black transition-colors duration-300 font-bold">
+           MORE ABOUT <i className="fa-solid fa-arrow-right-long ml-2"></i>
           </span>
           
           </button>
