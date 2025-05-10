@@ -4,18 +4,18 @@ import { Skilled } from './Skills'
 export const SkillSection = () => {
 
     const Skills = [
-        { skill: "HTML", percent: 40},
-        { skill: "JavaScript", percent: 89 },
-        { skill: "CSS", percent: 30 },
-        { skill: "jQuery", percent: 70 },
-        { skill: "React", percent: 45 },
-        {skill: "Tailwind" , percent:70},
+        { skill: "HTML", percent: 90},
+        { skill: "CSS", percent: 80 },
+        { skill: "JavaScript", percent: 60 },
+        { skill: "jQuery", percent: 80 },
+        { skill: "React", percent: 70 },
+        {skill: "Tailwind" , percent:90},
     ];
 
     return (
         <>
-            <section className='skill-section'>
-                <h1 className='skill-title'>My Skills</h1>
+            <section className='skill-section my-15'>
+                <h1 className='skill-title mb-15 text-center text-[50px] font-bold'>MY SKILLS</h1>
                 <div className='skill-grid grid grid-cols-3'>
                     {
                         Skills.map(({skill, percent}) =>(

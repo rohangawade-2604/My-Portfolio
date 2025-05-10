@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SkillSection } from '../../Skills_Components/SkillSection'
+import { Education } from '../../Educations_Compo/Education'
 
 export const About = () => {
   return (
@@ -52,8 +53,12 @@ export const About = () => {
 
         </div>
 
+      {/*-------- Skills Sections-------------- */}
+
       <SkillSection/>
       
+      {/*--------- Education Section--------------- */}
+      <Education/>
 
 
       </div>
