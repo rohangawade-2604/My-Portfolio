@@ -15,7 +15,7 @@ export const SkillSection = () => {
     return (
         <>
             <section className='skill-section my-15'>
-                <h1 className='skill-title mb-15 text-center text-[50px] font-bold'>MY SKILLS</h1>
+                <h1 className='skill-title mb-15 text-center text-[30px] font-bold'>MY SKILLS</h1>
                 <div className='skill-grid grid grid-cols-3'>
                     {
                         Skills.map(({skill, percent}) =>(

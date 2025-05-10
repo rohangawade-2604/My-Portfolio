@@ -6,7 +6,7 @@ import { Education } from '../../Educations_Compo/Education'
 export const About = () => {
   return (
     <>
-      <div className='h-300 px-10 text-white bg-black relative'>
+      <div className='h-450 px-40 text-white bg-black relative'>
         <h1 className='text-center text-[110px] font-bold opacity-15 absolute left-138'>RESUME</h1>
         <h1 className='text-[60px] font-bold text-center pt-10'>ABOUT <span className='text-amber-300'>ME</span></h1>
 
