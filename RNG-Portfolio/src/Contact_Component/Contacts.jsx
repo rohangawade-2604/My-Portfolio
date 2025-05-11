@@ -7,7 +7,7 @@ const Contact = () => {
         <h1 className='text-[110px] font-bold opacity-15 absolute left-130 '>CONTACT</h1>
         <h1 className='text-[60px] font-bold text-center pt-10'>GET IN <span className='text-amber-400'>TOUCH</span> </h1>
 
-        <div className='flexibility flex justify-around mx-40 my-15'>
+        <div className='flexibility flex justify-between mx-40 my-15'>
 
             <div className="contact-details ">
 
@@ -54,14 +54,15 @@ const Contact = () => {
 
           {/*----- 2nd div for contact page------ */}
 
-        <div className="Contact-form">
+        <div className="Contact-form ml-50 text-center">
           <form action="">
-            <input type="text" name='text' placeholder='Your name' /> <input type="text" name='text' placeholder='Your Email' />
+            <input type="text" name='text' placeholder='Your name' className='border-2 p-3 w-70'/> 
+            <input type="text" name='text' placeholder='Your Email' className='border-2 ml-5 p-3 w-70'/>
 
-            <input type="text" name='text' placeholder='Your Subject' />
-            <textarea name="" id="" placeholder='your message'></textarea>
+            <input type="text" name='text' placeholder='Your Subject' className='border-2 p-3 mt-5 w-145'/>
+            <textarea name="" id="" placeholder='your message' className='border-2 p-3 mt-5 w-145 h-49'></textarea> 
 
-            <button>send message</button>
+            <button className='block'>send message</button>
           </form>
         </div>
 
