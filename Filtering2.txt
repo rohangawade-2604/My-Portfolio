@@ -1,0 +1,78 @@
+import React from "react";
+import "./Gallery.css"; // we'll write styles here
+
+const imageData = [
+  { id: 1, src: "https://via.placeholder.com/300x200", title: "SLIDER PROJECT" },
+  { id: 2, src: "https://via.placeholder.com/300x200", title: "MOCKUP WORK" },
+  { id: 3, src: "https://via.placeholder.com/300x200", title: "GRAPHIC ART" }
+];
+
+function GalleryHover() {
+  return (
+    <div className="gallery-container">
+      {imageData.map(item => (
+        <div key={item.id} className="image-card">
+          <img src={item.src} alt={item.title} />
+          <div className="overlay">
+            <h3>{item.title}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default GalleryHover;
+
+Below this I have written the CSS for the upper code
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #111;
+  padding: 20px;
+}
+
+.image-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.image-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.85); /* orange overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.image-card:hover .overlay {
+  opacity: 1;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
