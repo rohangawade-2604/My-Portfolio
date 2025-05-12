@@ -24,7 +24,11 @@ function GalleryHover() {
 
 export default GalleryHover;
 
+
+//////////////////
 Below this I have written the CSS for the upper code
+/////////////////
+
 
 .gallery-container {
   display: flex;
