@@ -7,6 +7,8 @@ const Portfolio = () => {
         
         <h1 className='text-[110px] font-bold text-center absolute left-140 opacity-15'>WORKS</h1>
         <h1 className='text-center font-bold text-[45px] pt-15'>MY <span className='text-amber-400'>PORTFOLIO</span></h1>
+
+        
       </div>
     </>
   )

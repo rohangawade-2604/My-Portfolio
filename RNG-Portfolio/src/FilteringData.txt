@@ -1,0 +1,44 @@
+import React, { useState } from "react";
+
+const imageData = [
+  { id: 1, category: "logo", src: "https://via.placeholder.com/150?text=Logo+1" },
+  { id: 2, category: "mockup", src: "https://via.placeholder.com/150?text=Mockup+1" },
+  { id: 3, category: "logo", src: "https://via.placeholder.com/150?text=Logo+2" },
+  { id: 4, category: "mockup", src: "https://via.placeholder.com/150?text=Mockup+2" },
+  { id: 5, category: "graphic", src: "https://via.placeholder.com/150?text=Graphic+1" },
+];
+
+function Gallery() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  // Filter the data based on selected category
+  const filteredData =
+    selectedCategory === "all"
+      ? imageData
+      : imageData.filter(item => item.category === selectedCategory);
+
+  return (
+    <div style={{ textAlign: "center", backgroundColor: "#111", color: "#fff", minHeight: "100vh", padding: "20px" }}>
+      {/* Filter Buttons */}
+      <div style={{ marginBottom: "20px" }}>
+        <button onClick={() => setSelectedCategory("all")}>All</button>
+        <button onClick={() => setSelectedCategory("logo")}>Logo</button>
+        <button onClick={() => setSelectedCategory("mockup")}>Mockup</button>
+      </div>
+
+      {/* Gallery Grid */}
+      <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "20px" }}>
+        {filteredData.map(item => (
+          <img
+            key={item.id}
+            src={item.src}
+            alt={item.category}
+            style={{ width: "150px", height: "150px", borderRadius: "8px" }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Gallery;
