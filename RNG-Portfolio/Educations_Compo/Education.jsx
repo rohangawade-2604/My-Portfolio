@@ -4,7 +4,7 @@ export const Education = () => {
   const Education = [
     {
       "id": 1,
-      "year": "2025-Present",
+      "year": "2025-PRESENT",
       "Course": "Full Stack Development Course",
       "Location": "Nettech India , Andheri",
       "p": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, architecto? Eos dignissimos fugit maiores. "
@@ -13,7 +13,7 @@ export const Education = () => {
 
     {
       "id": 2,
-      "year": "2024",
+      "year": "2021-2024",
       "Course": "Bachelor's in Information Technology",
       "Location": "Smt. K. G Mittal College, Malad (West)",
        "p": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, architecto? Eos dignissimos fugit maiores. "
@@ -22,7 +22,7 @@ export const Education = () => {
 
     {
       "id": 3,
-      "year": "2021",
+      "year": "2019-2021",
       "Course": "12th-Maharashtra HSC Board",
       "Location": "Nirmal JR College of Commerce and Science, kandivali ",
        "p": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, architecto? Eos dignissimos fugit maiores ."
