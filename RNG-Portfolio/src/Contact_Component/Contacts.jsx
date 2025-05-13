@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Contact = () => {
+  
   return (
     <>
       <div className="Contact-Parent bg-black text-white h-[100vh] w-[100%] relative ">
