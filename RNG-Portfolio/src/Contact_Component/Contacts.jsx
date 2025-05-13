@@ -1,37 +1,31 @@
 import React from 'react'
 import emailjs from '@emailjs/browser'
+import { useRef } from 'react';
 
-const Contact = () => {
+ const Contact = () => {
   
-  const Contactform = () => {
+    const formPart  = useRef();
 
-    const form  = useRef()
+   const SendEmail = (e) => {
+  e.preventDefault();
 
-    const SendEmail = (e) => {
-      e.preventDefault();
+  emailjs.sendForm(
+    'your_service_id',   // Replace this
+    'your_template_id',  // Replace this
+    formPart.current,
+    'your_public_key'    // Replace this
+  )
+  .then((result) => {
+    console.log('Email sent', result.text);
+    alert('Message sent Successfully');
+    formPart.current.reset();
+  })
+  .catch((error) => {
+    console.log("Error", error.text);
+    alert("Failed to Send Message. Try again...!");
+  });
+};
 
-      // below 5 steps is mainly to write
-
-      emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        form.current,
-        'YOUR_PUBLIC_KEY'
-      )
-
-      .try((result) => {
-        console.log('Email sent', result.text)
-        alert('Message sent Successfully')
-        form.current.reset();
-      },
-    (error) => {
-      console.log("Error", error.text)
-      alert("Failed to Send Message . Try again...!");
-    });
-    };
-
-
-  }
 
 
   return (
@@ -66,36 +60,36 @@ const Contact = () => {
             </div>
 
             <div className='call-me mt-5 flex mb-10'>
-              <div><i class="fa-solid fa-square-phone" style={{ color: "#FFD43B", fontSize: "30px" }}></i></div>
+              <div><i className="fa-solid fa-square-phone" style={{ color: "#FFD43B", fontSize: "30px" }}></i></div>
               <div className="ml-7">
                 <h1 className='opacity-70'>CALL ME</h1>
                 <p className='font-semibold'>+91-9769637063</p>
               </div>
             </div>
 
-            <button className=' p-[3px] cursor-pointer ml-3'><i class="fa-brands fa-linkedin" style={{ color: "#FFD43B", fontSize: "30px" }}></i></button>
+            <button className=' p-[3px] cursor-pointer ml-3'><i className="fa-brands fa-linkedin" style={{ color: "#FFD43B", fontSize: "30px" }}></i></button>
 
-            <button className=' p-[3px] ml-3 cursor-pointer'><i class="fa-brands fa-github" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
+            <button className=' p-[3px] ml-3 cursor-pointer'><i className="fa-brands fa-github" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
             </button>
 
-            <button className=' p-[3px] ml-3 rounded-[5px]  cursor-pointer'><i class="fa-brands fa-facebook" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
+            <button className=' p-[3px] ml-3 rounded-[5px]  cursor-pointer'><i className="fa-brands fa-facebook" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
             </button>
 
-            <button className=' p-[3px] ml-3 rounded-[5px] cursor-pointer'><i class="fa-brands fa-instagram" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
+            <button className=' p-[3px] ml-3 rounded-[5px] cursor-pointer'><i className="fa-brands fa-instagram" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
             </button>
           </div>
 
           {/*----- 2nd div for contact page------ */}
 
           <div className="Contact-form ml-50 text-center">
-            <form ref={form} onSubmit={sendEmail}>
-              <input type="text" name='user_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' />
-              
-              <input type="text" name='user_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' />
+            <form ref={formPart} onSubmit={SendEmail}>
+              <input type="text" name='user_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' required />
 
-              <input type="text" name='subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' />
+              <input type="text" name='user_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' required />
 
-              <textarea name="message" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl'></textarea>
+              <input type="text" name='subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' required />
+
+              <textarea name="message" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl' required></textarea>
 
               <button type='submit' className="relative group border-2 mr-[65%] border-amber-300 text-white rounded-3xl p-4 mt-6 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
               before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-amber-300 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:scale-x-100">
@@ -116,4 +110,5 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;
+
