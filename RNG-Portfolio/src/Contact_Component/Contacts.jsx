@@ -1,7 +1,39 @@
 import React from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   
+  const Contactform = () => {
+
+    const form  = useRef()
+
+    const SendEmail = (e) => {
+      e.preventDefault();
+
+      // below 5 steps is mainly to write
+
+      emailjs.sendForm(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        form.current,
+        'YOUR_PUBLIC_KEY'
+      )
+
+      .try((result) => {
+        console.log('Email sent', result.text)
+        alert('Message sent Successfully')
+        form.current.reset();
+      },
+    (error) => {
+      console.log("Error", error.text)
+      alert("Failed to Send Message . Try again...!");
+    });
+    };
+
+
+  }
+
+
   return (
     <>
       <div className="Contact-Parent bg-black text-white h-[100vh] w-[100%] relative ">
@@ -56,15 +88,16 @@ const Contact = () => {
           {/*----- 2nd div for contact page------ */}
 
           <div className="Contact-form ml-50 text-center">
-            <form action="">
-              <input type="text" name='text' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' />
-              <input type="text" name='text' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' />
+            <form ref={form} onSubmit={sendEmail}>
+              <input type="text" name='user_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' />
+              
+              <input type="text" name='user_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' />
 
-              <input type="text" name='text' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' />
+              <input type="text" name='subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' />
 
-              <textarea name="" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl'></textarea>
+              <textarea name="message" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl'></textarea>
 
-              <button className="relative group border-2 mr-[65%] border-amber-300 text-white rounded-3xl p-4 mt-6 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
+              <button type='submit' className="relative group border-2 mr-[65%] border-amber-300 text-white rounded-3xl p-4 mt-6 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
               before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-amber-300 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:scale-x-100">
 
                 <span className="relative z-10 group-hover:text-black transition-colors duration-300 font-bold">
