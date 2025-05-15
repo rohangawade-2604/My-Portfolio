@@ -7,13 +7,13 @@ import { useRef } from 'react';
     const formPart  = useRef();
 
    const SendEmail = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
   emailjs.sendForm(
-    'your_service_id',   // Replace this
-    'your_template_id',  // Replace this
+    'service_k5rmvou',   // Replace this
+    'template_crbg4ix',  // Replace this
     formPart.current,
-    'your_public_key'    // Replace this
+    '61DbcABcbaelDfwdo'    // Replace this
   )
   .then((result) => {
     console.log('Email sent', result.text);
@@ -83,11 +83,11 @@ import { useRef } from 'react';
 
           <div className="Contact-form ml-50 text-center">
             <form ref={formPart} onSubmit={SendEmail}>
-              <input type="text" name='user_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' required />
+              <input type="text" name='from_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' required />
 
-              <input type="text" name='user_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' required />
+              <input type="text" name='from_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' required />
 
-              <input type="text" name='subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' required />
+              <input type="text" name='from_subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' required />
 
               <textarea name="message" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl' required></textarea>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+  
 const imageData = [
   { id: 1, category: "logo", src: "https://via.placeholder.com/150?text=Logo+1" },
   { id: 2, category: "mockup", src: "https://via.placeholder.com/150?text=Mockup+1" },

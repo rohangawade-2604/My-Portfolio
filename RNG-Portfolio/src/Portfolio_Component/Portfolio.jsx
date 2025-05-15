@@ -1,6 +1,60 @@
 import React from 'react'
+import Aussies from "../assets/Aussies Projects.png"
+import Coffee from "../assets/Coffie web.png"
+import Creative from "../assets/Creative Des.png"
+import Deepport from "../assets/Deepak-Portfolio.png"
+import mdmr from "../assets/mdm.png"
+import Todo from "../assets/Todo-List.png"
 
 const Portfolio = () => {
+
+  const Projects = [
+    {
+      id:1,
+      img:{Aussies},
+      title:"Aussies Buckets Website"
+    },
+
+    {
+      id:2,
+      img:{Coffee},
+      title: "Coffee Delite Website"
+    },
+
+    {
+      id:3,
+      img:{Creative},
+      title:"Creative Company Website"
+    },
+
+    {
+      id:4,
+      img:{Deepport},
+      title:"Gym Portfolio Website"
+    },
+
+    {
+      id:5,
+      img:{mdmr},
+      title:"1MDM website"
+    },
+
+    {
+      id:6,
+      img:{Todo},
+      title:"Todo List"
+    },
+
+    {
+      id:7,
+      img:{Aussies},
+      title:
+    }
+
+
+
+  ]
+
   return (
     <>
       <div className='Portfolio_Part bg-black text-white h-200 w-full relative'>
