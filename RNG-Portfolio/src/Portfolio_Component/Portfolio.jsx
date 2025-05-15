@@ -1,54 +1,54 @@
 import React from 'react'
-import Aussies from "../assets/Aussies Projects.png"
-import Coffee from "../assets/Coffie web.png"
-import Creative from "../assets/Creative Des.png"
-import Deepport from "../assets/Deepak-Portfolio.png"
+import Aussies from "../assets/Aussies_Projects.png"; // correct
+import Coffee from "../assets/Coffie_web.png"
+import Creative from "../assets/Creative_Des.png"
+import Deepport from "../assets/Deepak_Portfolio.png"
 import mdmr from "../assets/mdm.png"
-import Todo from "../assets/Todo-List.png"
+import Todo from "../assets/Todo_List.png"
 
 const Portfolio = () => {
 
   const Projects = [
     {
       id:1,
-      img:{Aussies},
+      img:Aussies,
       title:"Aussies Buckets Website"
     },
 
     {
       id:2,
-      img:{Coffee},
+      img:Coffee,
       title: "Coffee Delite Website"
     },
 
     {
       id:3,
-      img:{Creative},
+      img:Creative,
       title:"Creative Company Website"
     },
 
     {
       id:4,
-      img:{Deepport},
+      img:Deepport,
       title:"Gym Portfolio Website"
     },
 
     {
       id:5,
-      img:{mdmr},
+      img:mdmr,
       title:"1MDM website"
     },
 
     {
       id:6,
-      img:{Todo},
+      img:Todo,
       title:"Todo List"
     },
 
     {
       id:7,
-      img:{Aussies},
-      title:
+      img:Aussies,
+      title:"Aussies"
     }
 
 
@@ -68,6 +68,17 @@ const Portfolio = () => {
           <button className='ml-15 font-semibold cursor-pointer'>REACT.JS</button>
           <button className='ml-15 font-semibold cursor-pointer'>TAILWIND CSS</button>
 
+        </div>
+
+
+        <div className="Content-part">
+          {
+            Projects.map((el , id) => (
+              <div className="card">
+                <img src={el.img} alt="" key={id}/>
+              </div>
+            ))
+          }
         </div>
       </div>
     </>
