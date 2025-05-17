@@ -84,8 +84,8 @@ export const Portfolio = () => {
 
         <div className="button mt-15 text-center " data-aos="fade-up">
           <button onClick={() => setData("All")} className='ml-15 font-semibold cursor-pointer'>ALL</button>
-          <button onClick={() => setData("HCJ")} className='ml-15 font-semibold cursor-pointer'>HTML & CSS & JAVASCRIPT</button>
-          <button onClick={() => setData("react")} className='ml-15 font-semibold cursor-pointer'>REACT.JS & TAILWIND CSS</button>
+          <button onClick={() => setData("HCJ")} className='ml-15 font-semibold cursor-pointer'>HTML & <span className='text-amber-400'>CSS &</span>  JAVASCRIPT</button>
+          <button onClick={() => setData("react")} className='ml-15 font-semibold cursor-pointer'>REACT.JS & <span className='text-amber-400'>TAILWIND CSS</span> </button>
           
 
         </div>
@@ -94,10 +94,10 @@ export const Portfolio = () => {
         <div className="Content-part grid grid-cols-3 my-20 justify-items-center mx-23 gap-10">
           {
             filterData.map((el , id) => (
-              <div className='' data-aos="fade-up">
-                 <div className="card text-white text-center font-bold text-[17px]" data-aos="fade-up">
-                <img src={el.img} alt={el.category || "project"} key={id} className='h-40 mt-10' data-aos="fade-up"/>
-                <h1 className='mt-5' data-aos="fade-up">{el.title}</h1>
+              <div className='' key={id} data-aos="fade-right">
+                 <div className="card text-white text-center font-bold text-[17px]" data-aos="fade-right">
+                <img src={el.img} alt={el.category || "project"} key={id} className='h-40 mt-10' data-aos="fade-right"/>
+                <h1 className='mt-5' data-aos="fade-right">{el.title}</h1>
               </div>
               </div>
              

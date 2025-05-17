@@ -3,18 +3,20 @@ import My from '../assets/bg1.png'
 import bgImg from "../assets/bgimg.png"
 import { useEffect } from 'react';
 import AOS from 'aos';
+import { About } from '../AboutComponent/About';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
-      useEffect(() => {
-      AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        easing: 'ease-out-cubic', // Animation easing
-        once: true, // Whether animation should happen only once
-        disable: false // Disable AOS on mobile devices
-      });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: 'ease-out-cubic', // Animation easing
+      once: true, // Whether animation should happen only once
+      disable: false // Disable AOS on mobile devices
+    });
+  }, []);
 
   return (
     <>
@@ -31,15 +33,16 @@ export const Home = () => {
 
           <button className="relative group border-2 border-amber-300 text-white rounded-3xl p-4 mt-5 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
            before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-amber-300 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:scale-x-100">
-          
-           <span className="relative z-10 group-hover:text-black transition-colors duration-300 font-bold">
-           MORE ABOUT <i className="fa-solid fa-arrow-right-long ml-2"></i>
-          </span>
-          
+
+            <span className="relative z-10 group-hover:text-black transition-colors duration-300 font-bold">
+              <Link to="/about"> MORE ABOUT <i className="fa-solid fa-arrow-right-long ml-2"></i></Link>
+
+            </span>
+
           </button>
 
-       </div>
-       
+        </div>
+
       </div>
 
     </>

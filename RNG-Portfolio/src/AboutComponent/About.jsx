@@ -18,7 +18,7 @@ export const About = () => {
       }, []);
   return (
     <>
-      <div className='h-450 px-40 text-white bg-black relative'  >
+      <div className='h-450 px-40 text-white bg-black relative dark:bg-white dark:text-black'  >
         <h1 className='text-center text-[110px] font-bold opacity-15 absolute left-138' >RESUME</h1>
         <h1 className='text-[60px] font-bold text-center pt-10'  data-aos="fade-up" >ABOUT <span className='text-amber-300'  data-aos="fade-up">ME</span></h1>
 
@@ -59,7 +59,7 @@ export const About = () => {
 
           <div className="counting-per mt-10">
             <div>
-              <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRzcmpuMnU1bWFvdHYyNGk5NXd0eHUyNng3anlkNG5jYWI5MWV0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u2pmTWUi0MXjyrMaVj/giphy.gif" alt="being" className='h-90 ' />
+              <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRzcmpuMnU1bWFvdHYyNGk5NXd0eHUyNng3anlkNG5jYWI5MWV0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u2pmTWUi0MXjyrMaVj/giphy.gif" alt="being" className='h-90 '  data-aos="fade-up" />
             </div>
           </div>
 
