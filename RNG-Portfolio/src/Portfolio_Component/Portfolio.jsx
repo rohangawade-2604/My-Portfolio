@@ -71,12 +71,16 @@ export const Portfolio = () => {
         </div>
 
 
-        <div className="Content-part">
+        <div className="Content-part grid grid-cols-3">
           {
             Projects.map((el , id) => (
-              <div className="card">
+              <div className=''>
+                 <div className="card text-white ">
                 <img src={el.img} alt="" key={id} className='h-20'/>
+                <h1>{el.title}</h1>
               </div>
+              </div>
+             
             ))
           }
         </div>
