@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
 
@@ -25,9 +26,10 @@ export const Header = () => {
   return (
     <>
       <div className=' '>
-        <div className='gap-20 pl-10 text-[18px] border-b-2 border-white flex justify-center items-center h-25 w-full bg-black font-bold bg-fixed relative '>
+        <div className='gap-15 text-[18px] border-b-2 border-white flex justify-center items-center h-25 w-full bg-black font-bold bg-fixed relative '>
 
-          <img src="https://cdn4.vectorstock.com/i/1000x1000/58/93/rng-letter-logo-design-monogram-initials-vector-42005893.jpg" alt="" className='h-20 absolute left-10 bottom-3 ' />
+          <Link to="/">  <img src="https://cdn4.vectorstock.com/i/1000x1000/58/93/rng-letter-logo-design-monogram-initials-vector-42005893.jpg" alt="" className='h-20 absolute left-10 bottom-3 ' /></Link>
+        
           {
             links.map((data) => (
 

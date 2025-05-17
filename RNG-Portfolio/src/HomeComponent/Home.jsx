@@ -3,7 +3,6 @@ import My from '../assets/bg1.png'
 import bgImg from "../assets/bgimg.png"
 import { useEffect } from 'react';
 import AOS from 'aos';
-import { About } from '../AboutComponent/About';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 
