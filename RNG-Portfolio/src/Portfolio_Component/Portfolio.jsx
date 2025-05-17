@@ -1,4 +1,4 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import React from 'react'
 import AB from "../assets/AB.png"; // correct
 import CW from "../assets/CW.png"
@@ -13,72 +13,75 @@ import 'aos/dist/aos.css';
 
 export const Portfolio = () => {
 
-    const [data , setData] = useState("All");
+  const [data, setData] = useState("All");
 
   const Projects = [
     {
-      id:1,
-      img:AB,
-      title:"Aussies Buckets Website",
-      category:"react"
+      id: 1,
+      img: AB,
+      title: "Aussies Buckets Website",
+      category: "react"
     },
 
     {
-      id:2,
-      img:CW,
+      id: 2,
+      img: CW,
       title: "Coffee Delite Website",
-      category:"HCJ",
+      category: "HCJ",
     },
 
     {
-      id:3,
-      img:CD,
-      title:"Creative Company Website",
-      category:"HCJ",
+      id: 3,
+      img: CD,
+      title: "Creative Company Website",
+      category: "HCJ",
     },
 
     {
-      id:4,
-      img:DP,
-      title:"Gym Portfolio Website",
-      category:"react",
+      id: 4,
+      img: DP,
+      title: "Gym Portfolio Website",
+      category: "react",
     },
 
     {
-      id:5,
-      img:md,
-      title:"1MDM website",
-      category:"react",
+      id: 5,
+      img: md,
+      title: "1MDM website",
+      category: "react",
     },
 
     {
-      id:6,
-      img:TL,
-      title:"Todo List",
-      category:"HCJ",
+      id: 6,
+      img: TL,
+      title: "Todo List",
+      category: "HCJ",
     },
 
 
-]
+  ]
 
 
   const filterData = data === "All" ? Projects : Projects.filter((el) => {
     return el.category === data;
   })
 
-    useEffect(() => {
-          AOS.init({
-            duration: 1000, // Animation duration in milliseconds
-            easing: 'ease-out-cubic', // Animation easing
-            once: true, // Whether animation should happen only once
-            disable: false // Disable AOS on mobile devices
-          });
-        }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: 'ease-out-cubic', // Animation easing
+      once: true, // Whether animation should happen only once
+      disable: false // Disable AOS on mobile devices
+    });
+  }, []);
 
+  useEffect(() => {
+    document.title = " Rohan Gawade | Portfolio"
+  })
   return (
     <>
-      <div className='Portfolio_Part bg-black text-white h-250 w-full relative'>
-        
+      <div className='Portfolio_Part bg-black text-white h-250 w-full relative pt-25'>
+
         <h1 className='text-[110px] font-bold text-center absolute left-140 ml-5 opacity-15'>WORKS</h1>
         <h1 className='text-center font-bold text-[45px] ml-8 pt-15'>MY <span className='text-amber-400'>PORTFOLIO</span></h1>
 
@@ -86,21 +89,21 @@ export const Portfolio = () => {
           <button onClick={() => setData("All")} className='ml-15 font-semibold cursor-pointer'>ALL</button>
           <button onClick={() => setData("HCJ")} className='ml-15 font-semibold cursor-pointer'>HTML & <span className='text-amber-400'>CSS &</span>  JAVASCRIPT</button>
           <button onClick={() => setData("react")} className='ml-15 font-semibold cursor-pointer'>REACT.JS & <span className='text-amber-400'>TAILWIND CSS</span> </button>
-          
+
 
         </div>
 
 
         <div className="Content-part grid grid-cols-3 my-20 justify-items-center mx-23 gap-10">
           {
-            filterData.map((el , id) => (
+            filterData.map((el, id) => (
               <div className='' key={id} data-aos="fade-right">
-                 <div className="card text-white text-center font-bold text-[17px]" data-aos="fade-right">
-                <img src={el.img} alt={el.category || "project"} key={id} className='h-40 mt-10' data-aos="fade-right"/>
-                <h1 className='mt-5' data-aos="fade-right">{el.title}</h1>
+                <div className="card text-white text-center font-bold text-[17px]" data-aos="fade-right">
+                  <img src={el.img} alt={el.category || "project"} key={id} className='h-40 mt-10' data-aos="fade-right" />
+                  <h1 className='mt-5' data-aos="fade-right">{el.title}</h1>
+                </div>
               </div>
-              </div>
-             
+
             ))
           }
         </div>

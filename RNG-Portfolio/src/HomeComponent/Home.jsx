@@ -17,9 +17,13 @@ export const Home = () => {
     });
   }, []);
 
+     useEffect(() => {
+      document.title = "Rohan Gawade | Home"
+    })
+
   return (
     <>
-      <div className='flex justify-center items-center gap-10 h-170 px-10 text-white'
+      <div className='flex justify-center items-center gap-10 h-180 px-10 text-white mt-17'
         style={{ backgroundImage: `url(${bgImg})` }} >
         <div className="img">
           <img src={My} alt="" data-aos="fade-up" className='  bg-center w-150 bg-black bg-sticky bg-cover  rounded-4xl h-130 shadow-[10px_20px_20px_rgba(0,0,10,10.100)]' />

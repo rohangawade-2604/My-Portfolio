@@ -39,11 +39,15 @@ const Contact = () => {
     });
   }, []);
 
+   useEffect(() => {
+    document.title = "Contact "
+  })
+
 
 
   return (
     <>
-      <div className="Contact-Parent bg-black text-white h-[100vh] w-[100%] relative ">
+      <div className="Contact-Parent bg-black text-white h-[110vh] w-[100%] relative pt-25">
         <h1 className='text-[110px] font-bold opacity-15 absolute left-130 '>CONTACT</h1>
         <h1 className='text-[60px] font-bold text-center pt-10' data-aos="fade-up">GET IN <span className='text-amber-400'>TOUCH</span> </h1>
 
