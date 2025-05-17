@@ -6,7 +6,7 @@ import Deepport from "../assets/Deepak_Portfolio.png"
 import mdmr from "../assets/mdm.png"
 import Todo from "../assets/Todo_List.png"
 
-const Portfolio = () => {
+export const Portfolio = () => {
 
   const Projects = [
     {
@@ -85,4 +85,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+

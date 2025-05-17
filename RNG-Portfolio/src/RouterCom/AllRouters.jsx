@@ -4,7 +4,7 @@ import { About } from '../AboutComponent/About'
 // import { Contact } from '../HeaderPart/Contact' 
 import {Home} from '../HomeComponent/Home'
 import { Projects } from '../HeaderPart/Projects'
-import Portfolio from '../Portfolio_Component/Portfolio'
+import {Portfolio} from '../Portfolio_Component/Portfolio'
 import Contact from '../Contact_Component/Contacts'
 
 export const AllRouter = () => {
