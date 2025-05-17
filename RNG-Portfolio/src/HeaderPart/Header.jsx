@@ -20,7 +20,7 @@ export const Header = () => {
 
   }
 
- 
+
 
 
   return (
@@ -29,7 +29,7 @@ export const Header = () => {
         <div className='gap-15 text-[18px] border-b-2 border-white flex justify-center items-center h-25 w-full bg-black font-bold bg-fixed relative '>
 
           <Link to="/">  <img src="https://cdn4.vectorstock.com/i/1000x1000/58/93/rng-letter-logo-design-monogram-initials-vector-42005893.jpg" alt="" className='h-20 absolute left-10 bottom-3 ' /></Link>
-        
+
           {
             links.map((data) => (
 
@@ -45,23 +45,32 @@ export const Header = () => {
             ))
           }
 
-         <div className="buttons absolute right-10 ">
-           <button className=' p-[3px] cursor-pointer ml-3'><i className="fa-brands fa-linkedin" style={{ color: "#FFD43B", fontSize: "25px" }}></i></button>
+          <div className="buttons absolute right-10 ">
+            <button className=' p-[3px] cursor-pointer ml-3'>
+              <Link to="https://www.linkedin.com/in/rohan-gawade-112a942a7/">
+                <i className="fa-brands fa-linkedin" style={{ color: "#FFD43B", fontSize: "25px" }}></i>
+              </Link>
+            </button>
 
-            <button className=' p-[3px] ml-3 cursor-pointer'><i className="fa-brands fa-github" style={{ color: "#FFD43B", fontSize: "25px" }}></i>
+            <button className=' p-[3px] ml-3 cursor-pointer'>
+              <Link to="https://github.com/rohangawade-2604">
+                <i className="fa-brands fa-github" style={{ color: "#FFD43B", fontSize: "25px" }}></i>
+              </Link>
             </button>
 
             <button className=' p-[3px] ml-3 rounded-[5px]  cursor-pointer'><i className="fa-brands fa-facebook" style={{ color: "#FFD43B", fontSize: "25px" }}></i>
             </button>
 
-            <button className=' p-[3px] ml-3 rounded-[5px] cursor-pointer'><i className="fa-brands fa-instagram" style={{ color: "#FFD43B", fontSize: "25px" }}></i>
+            <button className=' p-[3px] ml-3 rounded-[5px] cursor-pointer'>
+              <Link to="https://www.instagram.com/alpha_ronnie_26/">
+                <i className="fa-brands fa-instagram" style={{ color: "#FFD43B", fontSize: "25px" }}></i></Link>
             </button>
-         </div>
+          </div>
 
         </div>
 
-       
-       
+
+
       </div>
 
 

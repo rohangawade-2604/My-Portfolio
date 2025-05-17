@@ -87,8 +87,9 @@ const Contact = () => {
             </button>
 
             <button className=' p-[3px] ml-3 cursor-pointer'>
-              <Link to="https://github.com/rohangawade-2604"></Link>
+              <Link to="https://github.com/rohangawade-2604">
               <i className="fa-brands fa-github" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
+              </Link> 
             </button>
 
             <button className=' p-[3px] ml-3 rounded-[5px]  cursor-pointer'><i className="fa-brands fa-facebook" style={{ color: "#FFD43B", fontSize: "30px" }}></i>
