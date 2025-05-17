@@ -1,10 +1,13 @@
 import React from 'react'
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
  const Contact = () => {
   
-    const formPart  = useRef();
+   const formPart  = useRef();
 
    const SendEmail = (e) => {
     e.preventDefault();
@@ -26,17 +29,26 @@ import { useRef } from 'react';
   });
 };
 
+  useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          easing: 'ease-out-cubic', // Animation easing
+          once: true, // Whether animation should happen only once
+          disable: false // Disable AOS on mobile devices
+        });
+      }, []);
+
 
 
   return (
     <>
       <div className="Contact-Parent bg-black text-white h-[100vh] w-[100%] relative ">
         <h1 className='text-[110px] font-bold opacity-15 absolute left-130 '>CONTACT</h1>
-        <h1 className='text-[60px] font-bold text-center pt-10'>GET IN <span className='text-amber-400'>TOUCH</span> </h1>
+        <h1 className='text-[60px] font-bold text-center pt-10'  data-aos="fade-up">GET IN <span className='text-amber-400'>TOUCH</span> </h1>
 
         <div className='flexibility flex justify-between mx-50 my-15'>
 
-          <div className="contact-details ">
+          <div className="contact-details " data-aos="fade-up">
 
             <div className="bio">
               <h1 className='text-[26px] font-bold '>DON'T BE SHY...!</h1>
@@ -81,7 +93,7 @@ import { useRef } from 'react';
 
           {/*----- 2nd div for contact page------ */}
 
-          <div className="Contact-form ml-50 text-center">
+          <div className="Contact-form ml-50 text-center" data-aos="fade-up" data-aos-duration="3000">
             <form ref={formPart} onSubmit={SendEmail}>
               <input type="text" name='from_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' required />
 

@@ -45,13 +45,13 @@ export const Education = () => {
     <>
       <div className="parent  w-full mt-20 ">
 
-        <h1 className='text-center font-bold text-[30px]'>Experience & Education</h1>
+        <h1 className='text-center font-bold text-[30px]'  data-aos="fade-up">Experience & Education</h1>
 
         <div className="parent-Edu grid grid-cols-2  border-white w-350 gap-7 ">
             
             {
               Education.map((el, id) => (
-                <div key={id} className='mt-12 flex  w-140'>
+                <div key={id} className='mt-12 flex  w-140'  data-aos="fade-up">
 
                   <div className="icon ">
                     <div className=' p-2 bg-amber-400'><i className="fa-solid fa-briefcase" style={{ color: "#ffffff", borderRadius:"50px"  }}></i></div>

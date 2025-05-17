@@ -2,17 +2,29 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SkillSection } from '../../Skills_Components/SkillSection'
 import { Education } from '../../Educations_Compo/Education'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const About = () => {
+
+     useEffect(() => {
+        AOS.init({
+          duration: 1000, // Animation duration in milliseconds
+          easing: 'ease-out-cubic', // Animation easing
+          once: true, // Whether animation should happen only once
+          disable: false // Disable AOS on mobile devices
+        });
+      }, []);
   return (
     <>
-      <div className='h-450 px-40 text-white bg-black relative'>
-        <h1 className='text-center text-[110px] font-bold opacity-15 absolute left-138'>RESUME</h1>
-        <h1 className='text-[60px] font-bold text-center pt-10'>ABOUT <span className='text-amber-300'>ME</span></h1>
+      <div className='h-450 px-40 text-white bg-black relative'  >
+        <h1 className='text-center text-[110px] font-bold opacity-15 absolute left-138' >RESUME</h1>
+        <h1 className='text-[60px] font-bold text-center pt-10'  data-aos="fade-up" >ABOUT <span className='text-amber-300'  data-aos="fade-up">ME</span></h1>
 
 
 
-        <div className=' bg-black  text-white flex justify-around items-center '>
+        <div className=' bg-black  text-white flex justify-around items-center' data-aos="fade-up">
 
           <div className="Info flex justify-between items-center ">
 

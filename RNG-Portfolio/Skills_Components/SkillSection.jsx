@@ -15,8 +15,8 @@ export const SkillSection = () => {
     return (
         <>
             <section className='skill-section my-15'>
-                <h1 className='skill-title mb-15 text-center text-[30px] font-bold'>MY SKILLS</h1>
-                <div className='skill-grid grid grid-cols-3'>
+                <h1 className='skill-title mb-15 text-center text-[30px] font-bold'  data-aos="fade-up">MY SKILLS</h1>
+                <div className='skill-grid grid grid-cols-3'  data-aos="fade-up">
                     {
                         Skills.map(({skill, percent}) =>(
                             <Skilled key={skill} skill={skill} percent={percent}/>
