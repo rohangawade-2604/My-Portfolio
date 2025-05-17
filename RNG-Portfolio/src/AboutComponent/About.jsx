@@ -24,7 +24,7 @@ export const About = () => {
 
   return (
     <>
-      <div className='h-450 px-40 text-white bg-black relative dark:bg-white dark:text-black pt-25'  >
+      <div className='h-450 px-40 text-white bg-black relative dark:bg-white dark:text-black pt-25 overflow-hidden'  >
         <h1 className='text-center text-[110px] font-bold opacity-15 absolute left-138' >RESUME</h1>
         <h1 className='text-[60px] font-bold text-center pt-10'  data-aos="fade-up" >ABOUT <span className='text-amber-300'  data-aos="fade-up">ME</span></h1>
 
