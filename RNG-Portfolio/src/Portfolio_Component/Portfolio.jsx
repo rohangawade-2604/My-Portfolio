@@ -1,53 +1,53 @@
 import React from 'react'
-import Aussies from "../assets/Aussies_Projects.png"; // correct
-import Coffee from "../assets/Coffie_web.png"
-import Creative from "../assets/Creative_Des.png"
-import Deepport from "../assets/Deepak_Portfolio.png"
-import mdmr from "../assets/mdm.png"
-import Todo from "../assets/Todo_List.png"
+import AB from "../assets/AB.png"; // correct
+import CW from "../assets/CW.png"
+import CD from "../assets/CD.png"
+import DP from "../assets/DP.png"
+import md from "../assets/md.png"
+import TL from "../assets/TL.png"
 
 export const Portfolio = () => {
 
   const Projects = [
     {
       id:1,
-      img:Aussies,
+      img:AB,
       title:"Aussies Buckets Website"
     },
 
     {
       id:2,
-      img:Coffee,
+      img:CW,
       title: "Coffee Delite Website"
     },
 
     {
       id:3,
-      img:Creative,
+      img:CD,
       title:"Creative Company Website"
     },
 
     {
       id:4,
-      img:Deepport,
+      img:DP,
       title:"Gym Portfolio Website"
     },
 
     {
       id:5,
-      img:mdmr,
+      img:md,
       title:"1MDM website"
     },
 
     {
       id:6,
-      img:Todo,
+      img:TL,
       title:"Todo List"
     },
 
     {
       id:7,
-      img:Aussies,
+      img:AB,
       title:"Aussies"
     }
 
@@ -75,7 +75,7 @@ export const Portfolio = () => {
           {
             Projects.map((el , id) => (
               <div className="card">
-                <img src={el.img} alt="" key={id}/>
+                <img src={el.img} alt="" key={id} className='h-20'/>
               </div>
             ))
           }

@@ -1,9 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { About } from '../AboutComponent/About'
-// import { Contact } from '../HeaderPart/Contact' 
+
 import {Home} from '../HomeComponent/Home'
-import { Projects } from '../HeaderPart/Projects'
 import {Portfolio} from '../Portfolio_Component/Portfolio'
 import Contact from '../Contact_Component/Contacts'
 
