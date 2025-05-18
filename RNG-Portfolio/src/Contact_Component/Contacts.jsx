@@ -47,11 +47,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className="Contact-Parent bg-black text-white h-[110vh] w-[100%] relative pt-25">
-        <h1 className='text-[110px] font-bold opacity-15 absolute left-130 '>CONTACT</h1>
-        <h1 className='text-[60px] font-bold text-center pt-10' data-aos="fade-up">GET IN <span className='text-amber-400'>TOUCH</span> </h1>
+      <div className="Contact-Parent bg-black text-white h-[110vh] w-[100%] relative pt-25 max-sm:mt-8 max-sm:h-[160vh] max-sm:overflow-hidden">
+        <h1 className='text-[110px] font-bold opacity-15 absolute left-130 max-sm:left-5 max-sm:text-[80px] max-sm:top-28'>CONTACT</h1>
+        <h1 className='text-[60px] font-bold text-center pt-10 max-sm:text-[45px]  ' data-aos="fade-up">GET IN <span className='text-amber-400'>TOUCH</span> </h1>
 
-        <div className='flexibility flex justify-between mx-50 my-15'>
+        <div className='flexibility flex justify-between mx-50 my-15 max-sm:block max-sm:mx-7'>
 
           <div className="contact-details " data-aos="fade-up">
 
@@ -107,18 +107,20 @@ const Contact = () => {
 
           {/*----- 2nd div for contact page------ */}
 
-          <div className="Contact-form ml-50 text-center" data-aos="fade-up" data-aos-duration="3000">
+          <div className="Contact-form ml-50 text-center max-sm:ml-0 max-sm:mt-12" data-aos="fade-up" data-aos-duration="3000">
             <form ref={formPart} onSubmit={SendEmail}>
-              <input type="text" name='from_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl' required />
+              <input type="text" name='from_name' placeholder='YOUR NAME' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 w-70 rounded-2xl max-sm:w-full' required />
 
-              <input type="text" name='from_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl' required />
+              <input type="text" name='from_email' placeholder='YOUR EMAIL' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 ml-5 p-3 w-70 rounded-2xl max-sm:w-full max-sm:ml-0 max-sm:mt-5' required />
 
-              <input type="text" name='from_subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl' required />
+              <input type="text" name='from_subject' placeholder='YOUR SUBJECT' className='bg-gray-950  border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 rounded-2xl max-sm:w-full' required />
 
-              <textarea name="message" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl' required></textarea>
+              <textarea name="message" id="" placeholder='YOUR MESSAGE' className='bg-gray-950 border-2 border-transparent hover:border-amber-400 p-3 mt-5 w-145 h-49 rounded-2xl max-sm:w-full' required></textarea>
 
               <button type='submit' className="relative group border-2 mr-[65%] border-amber-300 text-white rounded-3xl p-4 mt-6 cursor-pointer bg-transparent overflow-hidden transition-colors duration-300 ease-in-out 
-              before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-amber-300 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:scale-x-100">
+              before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-amber-300 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:before:scale-x-100 
+              
+              max-sm:p-3 max-sm:w-48">
 
                 <span className="relative z-10 group-hover:text-black transition-colors duration-300 font-bold">
                   SEND MESSAGES <i className="fa-solid fa-arrow-right-long ml-2"></i>

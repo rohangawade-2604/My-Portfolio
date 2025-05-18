@@ -60,7 +60,7 @@ export const Education = () => {
 
                   <div className="details ml-5 ">
                     <p className='bg-gray-900 rounded-3xl w-50 pl-3'>{el.year}</p>
-                    <h1 className='mt-5 font-bold uppercase max-sm:text-[16px] max-sm:w-90 '>{el.Course}</h1>
+                    <h1 className='mt-5 font-bold uppercase max-sm:text-[16px] max-sm:w-80 '>{el.Course}</h1>
                     <h2 className=' font-bold uppercase max-sm:text-[16px] max-sm:w-80'>{el.Location}</h2>
                     <p className='mt-3 max-sm:w-80'>{el.p}</p>
                   </div>

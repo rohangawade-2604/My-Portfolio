@@ -1,8 +1,8 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
     { path: "/", title: "Home" },
@@ -11,73 +11,98 @@ export const Header = () => {
     { path: "/contact", title: "Contact" },
   ];
 
-  const defaultStyle = {
-    color: "white"
-  }
-
-  const activeStyle = {
-    color: "yellow"
-
-  }
-
-
-
+  const defaultStyle = { color: "white" };
+  const activeStyle = { color: "yellow" };
 
   return (
-    <>
-      <div className=' fixed top-0 left-0 right-0 z-10'>
-        <div className='gap-15 text-[18px] border-b-2 border-white flex justify-center items-center h-25 w-full bg-black font-bold relative '>
+    <div className="fixed top-0 left-0 right-0 z-10">
+      <div className="text-[18px] border-b-2 border-white flex justify-between items-center h-20 px-6 bg-black font-bold">
 
-          <Link to="/">  <img src="https://cdn4.vectorstock.com/i/1000x1000/58/93/rng-letter-logo-design-monogram-initials-vector-42005893.jpg" alt="" className='h-20 absolute left-10 bottom-3 ' /></Link>
 
-          {
-            links.map((data) => (
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src="https://cdn4.vectorstock.com/i/1000x1000/58/93/rng-letter-logo-design-monogram-initials-vector-42005893.jpg"
+            alt="Logo"
+            className="h-14"
+          />
+        </Link>
 
-              <div className="" key={data.path}>
-                <NavLink style={({ isActive }) => {
-                  return isActive ? activeStyle : defaultStyle;
-                }} key={data.path} to={data.path} end >
-                  {data.title}
 
-                </NavLink>
-              </div>
+        {/* Hamburger Icon - visible only on small screens */}
+        <button
+          className="sm:hidden text-white text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className="fa-solid fa-bars"></i>
+        </button>
 
-            ))
-          }
 
-          <div className="buttons absolute right-10 ">
-            <button className=' p-[3px] cursor-pointer ml-3'>
-              <Link to="https://www.linkedin.com/in/rohan-gawade-112a942a7/">
-                <i className="fa-brands fa-linkedin" style={{ color: "#FFD43B", fontSize: "px" }}></i>
-              </Link>
-            </button>
 
-            <button className=' p-[3px] ml-3 cursor-pointer'>
-              <Link to="https://github.com/rohangawade-2604">
-                <i className="fa-brands fa-github" style={{ color: "#FFD43B", fontSize: "px" }}></i>
-              </Link>
-            </button>
-
-            <button className=' p-[3px] ml-3 rounded-[5px]  cursor-pointer'><i className="fa-brands fa-facebook" style={{ color: "#FFD43B", fontSize: "px" }}></i>
-            </button>
-
-            <button className=' p-[3px] ml-3 rounded-[5px] cursor-pointer'>
-              <Link to="https://www.instagram.com/alpha_ronnie_26/">
-                <i className="fa-brands fa-instagram" style={{ color: "#FFD43B", fontSize: "px" }}></i></Link>
-            </button>
-          </div>
-
+        {/* Navigation Links - hidden on small screens */}
+        <div className="hidden sm:flex gap-10 ml-25">
+          {links.map((data) => (
+            <NavLink
+              key={data.path}
+              to={data.path}
+              style={({ isActive }) => (isActive ? activeStyle : defaultStyle)}
+              end
+            >
+              {data.title}
+            </NavLink>
+          ))}
         </div>
 
-
-
+        {/* Social Icons */}
+        <div className="hidden sm:flex gap-3 text-xl text-yellow-400">
+          <a href="https://www.linkedin.com/in/rohan-gawade-112a942a7/" target="_blank" rel="noreferrer">
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/rohangawade-2604" target="_blank" rel="noreferrer">
+            <i className="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <i className="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/alpha_ronnie_26/" target="_blank" rel="noreferrer">
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+        </div>
       </div>
 
+      {/* Mobile Menu - only visible when menuOpen is true */}
+      {menuOpen && (
+        <div className="sm:hidden bg-black text-white text-center p-4">
+          {links.map((data) => (
+            <NavLink
+              key={data.path}
+              to={data.path}
+              onClick={() => setMenuOpen(false)} // close menu on link click
+              style={({ isActive }) => (isActive ? activeStyle : defaultStyle)}
+              className="block py-2"
+              end
+            >
+              {data.title}
+            </NavLink>
+          ))}
 
-
-    </>
-  )
-}
-
-
-
+          {/* Mobile Social Icons */}
+          <div className="flex justify-center gap-4 mt-4 text-yellow-400 text-xl">
+            <a href="https://www.linkedin.com/in/rohan-gawade-112a942a7/" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/rohangawade-2604" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/alpha_ronnie_26/" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
