@@ -27,7 +27,9 @@ export const About = () => {
     <>
       <div className='h-450 px-40 text-white bg-black relative  pt-25 max-sm:bg-black max-sm:h-700 max-sm:px-5 max-sm:mt-5 max-sm:overflow-hidden'  >
         <h1 className='text-center text-[110px] font-bold opacity-15 absolute left-138 top-28 max-sm:left-[45px] max-sm:text-[80px]' >RESUME</h1>
-        <h1 className='text-[60px] font-bold text-center pt-10 max-sm:text-[45px] max-sm:w-80 max-sm:ml-5'  data-aos="fade-up" >ABOUT <span className='text-amber-400'  data-aos="fade-up">ME</span></h1>
+        <h1 className='text-[60px] font-bold text-center pt-14 max-sm:text-[45px] max-sm:w-80 max-sm:ml-5'  data-aos="fade-up" >
+          ABOUT <span className='text-amber-400'  data-aos="fade-up">ME</span>
+        </h1>
 
 
 
