@@ -80,7 +80,7 @@ export const Portfolio = () => {
   })
   return (
     <>
-      <div className='Portfolio_Part bg-black text-white h-250 w-full relative pt-25 max-sm:pt-30 max-sm:h-500'>
+      <div className='Portfolio_Part bg-black text-white h-260 w-full relative pt-25 max-sm:pt-30 max-sm:h-500'>
 
         <h1 className='text-[110px] font-bold text-center absolute left-140 ml-5 opacity-15 max-sm:text-[80px] max-sm:left-[53px] max-sm:top-35 '>WORKS</h1>
         <h1 className='text-center font-bold text-[45px] ml-8 pt-15 max-sm:text-[30px] max-sm:mb-10'>MY <span className='text-amber-400'>PORTFOLIO</span></h1>

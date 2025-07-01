@@ -47,7 +47,7 @@ export const Education = () => {
 
         <h1 className='text-center font-bold text-[30px]'  data-aos="fade-up">Experience & Education</h1>
 
-        <div className="parent-Edu grid grid-cols-2 max-sm:block border-white w-350 gap-7 ">
+        <div className="parent-Edu grid grid-cols-2 max-sm:block border-white w-340 gap-7 ">
             
             {
               Education.map((el, id) => (
